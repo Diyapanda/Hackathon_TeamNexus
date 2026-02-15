@@ -3,6 +3,9 @@ import psycopg2
 from psycopg2 import pool
 from contextlib import contextmanager
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Get DB URL from env or use default
 DATABASE_URL = os.getenv("DATABASE_URL")
 

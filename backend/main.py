@@ -14,7 +14,9 @@ if not os.path.exists(uploads_path):
     os.makedirs(uploads_path)
 app.mount("/uploads", StaticFiles(directory=uploads_path), name="uploads")
 
-origins = os.getenv("ALLOWED_ORIGINS").split(",")
+origins_str = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173")
+origins = [o.strip() for o in origins_str.split(",") if o.strip()]
+
 # Allow frontend
 app.add_middleware(
     CORSMiddleware,
