@@ -304,7 +304,7 @@ const LandingPage = () => {
                         features={["Analytics Dashboard", "Disease Mapping", "Reports"]}
                     />
                     <PortalCard
-                        to="/laboratory"
+                        to="/login/laboratory"
                         icon={<Microscope size={32} />}
                         title="Laboratory"
                         description="Upload test results, generate reports, and contribute to health data."

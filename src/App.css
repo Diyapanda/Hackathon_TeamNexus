@@ -1080,7 +1080,8 @@
   .hero-visual {
     padding: 2rem 1rem;
   }
-} 
+}
+ 
  
 /* ==================== HOW IT WORKS SECTION ==================== */
 .how-it-works-section {
@@ -1249,4 +1250,274 @@
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* ==================== PAGE & AUTH STYLES (Laboratory login/register) ==================== */
+.page-container {
+  max-width: 1100px;
+  margin: 5.5rem auto;
+  padding: 2rem 1.5rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #00695c;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.content-box {
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98));
+  border-radius: 20px;
+  padding: 2.25rem;
+  box-shadow: 0 20px 50px rgba(2,6,23,0.08);
+}
+
+.auth-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 980px;
+  margin: 1.5rem auto 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.85));
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 30px 60px rgba(2,6,23,0.08);
+  overflow: hidden;
+  align-items: center;
+}
+
+.auth-visual {
+  padding: 2rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0,188,212,0.08), rgba(0,121,107,0.03));
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-badge {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(0,188,212,0.15), rgba(0,121,107,0.06));
+  color: #00796B;
+  font-weight: 700;
+}
+
+.auth-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #054f45;
+}
+
+.auth-sub {
+  color: #335e56;
+  font-size: 0.95rem;
+}
+
+.mini-cards {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 6px;
+}
+
+.mini-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  background: white;
+  padding: 0.6rem 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.04);
+}
+
+.mini-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #00796B;
+}
+
+.auth-panel {
+  padding: 0.75rem 1rem 1rem 1rem;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.auth-tabs button {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: #334155;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.auth-tabs button.active {
+  color: white;
+  background: linear-gradient(135deg, #00bcd4, #00796B);
+  box-shadow: 0 8px 30px rgba(0,188,212,0.15);
+}
+
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.alert.success { background: linear-gradient(90deg,#ecfdf5,#dcfce7); color: #065f46; border-left: 4px solid #34d399; }
+.alert.error { background: linear-gradient(90deg,#fff1f2,#fee2e2); color: #991b1b; border-left: 4px solid #f87171; }
+
+.auth-form label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(2,6,23,0.06);
+  background: white;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+  font-size: 0.95rem;
+  margin-top: 0.45rem;
+  transition: box-shadow 0.18s, border-color 0.18s, transform 0.12s;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: rgba(0,188,212,0.5);
+  box-shadow: 0 8px 30px rgba(0,188,212,0.08);
+  transform: translateY(-1px);
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+
+.muted { color: #64748b; font-size: 0.88rem; }
+
+.btn-danger { background: #ff6b6b; color: white; padding: 0.6rem 1rem; border-radius: 8px; border: none; font-weight: 700; }
+
+@media (max-width: 900px) {
+  .auth-card { grid-template-columns: 1fr; padding: 1rem; }
+  .two-col { grid-template-columns: 1fr; }
+  .page-container { margin: 2.5rem auto; }
+}
+
+/* ==================== CLERK STYLING ==================== */
+.clerk-signin,
+.clerk-signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.clerk-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.clerk-signin form,
+.clerk-signup form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.clerk-signin input,
+.clerk-signup input,
+.clerk-signin select,
+.clerk-signup select {
+  padding: 0.75rem 0.9rem !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(2,6,23,0.06) !important;
+  background: white !important;
+  font-size: 0.95rem !important;
+  margin-top: 0.45rem !important;
+}
+
+.clerk-signin input:focus,
+.clerk-signup input:focus {
+  outline: none !important;
+  border-color: rgba(0,188,212,0.5) !important;
+  box-shadow: 0 8px 30px rgba(0,188,212,0.08) !important;
+}
+
+.clerk-signin button[type="submit"],
+.clerk-signup button[type="submit"] {
+  background: linear-gradient(135deg, #00bcd4, #00796B) !important;
+  color: white !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  border: none !important;
+  margin-top: 0.5rem !important;
+}
+
+.clerk-signin button[type="submit"]:hover,
+.clerk-signup button[type="submit"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0,188,212,0.2) !important;
+}
+
+.clerk-signin .cl-formButtonSecondary,
+.clerk-signup .cl-formButtonSecondary {
+  background: transparent !important;
+  border: 1px solid rgba(0,188,212,0.3) !important;
+  color: #00796B !important;
+}
+
+.clerk-signin a,
+.clerk-signup a {
+  color: #00796B !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.clerk-signin a:hover,
+.clerk-signup a:hover {
+  text-decoration: underline !important;
+}
+
+.clerk-signin label,
+.clerk-signup label {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+}
+
+.clerk-signin .cl-headerTitle,
+.clerk-signup .cl-headerTitle {
+  color: #054f45 !important;
+}
+
+.clerk-signin .cl-headerSubtitle,
+.clerk-signup .cl-headerSubtitle {
+  color: #335e56 !important;
 }
