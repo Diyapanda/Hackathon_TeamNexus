@@ -277,7 +277,7 @@ const LandingPage = () => {
                     viewport={{ once: true }}
                 >
                     <PortalCard
-                        to="/patient"
+                        to="/login/patient"
                         icon={<User size={32} />}
                         title="Patient Portal"
                         description="Access your complete medical history securely via Smart Health Card (QR/NFC)."
@@ -286,7 +286,7 @@ const LandingPage = () => {
                         features={["Medical Records", "Prescriptions", "Appointments"]}
                     />
                     <PortalCard
-                        to="/doctor"
+                        to="/login/doctor"
                         icon={<Stethoscope size={32} />}
                         title="Doctor Portal"
                         description="View patient records, update diagnoses, and manage prescriptions efficiently."
@@ -295,7 +295,7 @@ const LandingPage = () => {
                         features={["Patient Records", "Diagnosis", "E-Prescriptions"]}
                     />
                     <PortalCard
-                        to="/admin"
+                        to="/login/health-officer"
                         icon={<ShieldCheck size={32} />}
                         title="Health Officer"
                         description="Monitor disease trends, analyze patterns, and manage surveillance data."
@@ -304,7 +304,7 @@ const LandingPage = () => {
                         features={["Analytics Dashboard", "Disease Mapping", "Reports"]}
                     />
                     <PortalCard
-                        to="/laboratory"
+                        to="/login/laboratory"
                         icon={<Microscope size={32} />}
                         title="Laboratory"
                         description="Upload test results, generate reports, and contribute to health data."
