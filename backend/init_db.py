@@ -1,6 +1,6 @@
 import asyncio
 from backend.core.database import engine, Base
-from backend.models import user, doctor, otp  # Import models to register them with Base
+from backend.models import user, doctor, otp, patient, laboratory  # Import models to register them with Base
 
 async def init_models():
     async with engine.begin() as conn:

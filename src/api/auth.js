@@ -15,6 +15,32 @@ export const authApi = {
         return response.json();
     },
 
+    registerRequestPatient: async (data) => {
+        const response = await fetch(`${API_URL}/register-request/patient`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        });
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.detail || "Patient Registration failed");
+        }
+        return response.json();
+    },
+
+    registerRequestLab: async (data) => {
+        const response = await fetch(`${API_URL}/register-request/lab`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        });
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.detail || "Lab Registration failed");
+        }
+        return response.json();
+    },
+
     verifyRegistration: async (email, otp) => {
         const response = await fetch(`${API_URL}/verify-registration`, {
             method: "POST",

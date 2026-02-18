@@ -1,9 +1,16 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+import os
+
 from fastapi.middleware.cors import CORSMiddleware
 from backend.core.config import settings
 from backend.api.v1.router import api_router
 
 app = FastAPI(title=settings.PROJECT_NAME)
+
+# Ensure static directory exists
+os.makedirs("backend/static", exist_ok=True)
+app.mount("/static", StaticFiles(directory="backend/static"), name="static")
 
 # CORS
 app.add_middleware(

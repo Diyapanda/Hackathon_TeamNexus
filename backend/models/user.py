@@ -27,4 +27,6 @@ class User(Base):
 
     # Relationships
     doctor_profile = relationship("Doctor", back_populates="user", uselist=False)
+    patient_profile = relationship("Patient", back_populates="user", uselist=False)
+    lab_profile = relationship("Laboratory", back_populates="user", uselist=False)
     otp_verifications = relationship("OTPVerification", back_populates="user")
