@@ -6,7 +6,20 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.core.config import settings
 from backend.api.v1.router import api_router
 
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+from fastapi import Request
+
 app = FastAPI(title=settings.PROJECT_NAME)
+
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    print(f"Validation Error: {exc.errors()}")
+    print(f"Body: {await request.body()}")
+    return JSONResponse(
+        status_code=422,
+        content={"detail": exc.errors(), "body": str(exc)},
+    )
 
 # Ensure static directory exists
 os.makedirs("backend/static", exist_ok=True)
