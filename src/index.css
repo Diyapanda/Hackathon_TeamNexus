@@ -68,3 +68,124 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #00796B, #004D40);
 }
+
+/* Glassmorphism & Utils */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.auth-container .input-group {
+  margin-bottom: 1.2rem;
+}
+
+.auth-container .input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.auth-container .input-field {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.auth-container .input-field:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.15);
+  outline: none;
+}
+
+.auth-container .btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  width: 100%;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 1rem;
+}
+
+.auth-container .btn-primary:active {
+  transform: translateY(0);
+}
+
+.auth-container .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 121, 107, 0.3);
+}
+
+.auth-container .btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  text-align: center;
+  width: 100%;
+}
+
+.auth-container .btn-secondary:hover {
+  background: rgba(0, 121, 107, 0.05);
+}
+
+.auth-container .error-msg {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.auth-container .success-msg {
+  color: #38a169;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Dashboard Styles */
+.btn-logout {
+  background: white;
+  color: #e53e3e;
+  border: 1px solid #e53e3e;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background: #e53e3e;
+  color: white;
+}
+
+/* Page Layouts */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+  padding: 24px;
+}
+
+.auth-container {
+  max-width: 480px;
+  width: 100%;
+}
